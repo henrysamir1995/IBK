@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: Consulta Puntual
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 158.754 s <<< FAILURE! - in Consulta Puntual
+CP043 - CP044(Consulta Puntual)  Time elapsed: 78.236 s  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: 
+Timed out after 2 seconds. Element not found
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PROQACAM5W10', ip: '10.11.152.38', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
+Driver info: driver.version: unknown
+
+CP043 - CP044(Consulta Puntual)  Time elapsed: 79.229 s  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: 
+Timed out after 2 seconds. Element not found
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PROQACAM5W10', ip: '10.11.152.38', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
+Driver info: driver.version: unknown
+

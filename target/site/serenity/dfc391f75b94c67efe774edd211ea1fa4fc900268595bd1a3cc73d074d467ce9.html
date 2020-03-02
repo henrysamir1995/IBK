@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>Features</title>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" href="fontawesome-free-5.3.1-web/css/all.css">
+<link rel="stylesheet" href="fontawesome-free-5.3.1-web/css/v4-shims.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.css">
+<link rel="stylesheet" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- JQuery-UI -->
+<link type="text/css" href="jqueryui/1.11.2-start/jquery-ui.min.css" rel="Stylesheet" />
+<script type="text/javascript" src="jqueryui/1.11.2-start/jquery-ui.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+
+
+    <script>
+
+        $(document).ready(function () {
+
+            var scenarioTable = $('.scenario-result-table').DataTable({
+
+                "order": [],
+                "language": {
+                    searchPlaceholder: "Filter",
+                    search: ""
+                }
+            });
+
+            $('.example-table table').DataTable({
+                searching: false,
+                ordering: false,
+                paging: false,
+                info: false
+            });
+
+            $('.example-table-in-scenario table').DataTable({
+                searching: false,
+                ordering: false,
+                paging: false,
+                info: false
+            });
+
+            $('#evidence-table').DataTable(
+                    {
+                        searching: false,
+                        ordering: false,
+                        paging: false,
+                        info: false
+                    }
+            );
+
+
+            $(".scenario-docs .card-body table").wrap("<div class='table-responsive'></div>");
+
+            $("#requirements-tabs").tabs();
+            $("#test-tabs").tabs();
+
+            var requirementsTree = [{"text":"Ingesta de Documentos - Manera Asincrona","type":"feature","href":"dfc391f75b94c67efe774edd211ea1fa4fc900268595bd1a3cc73d074d467ce9.html","nodes":[],"selectable":false,"tags":["","\u003cspan class\u003d\u0027feature-count\u0027\u003e9 scenarios\u003c/span\u003e"]}];
+
+            $('#tree').treeview({
+                data: requirementsTree,
+                enableLinks: true,
+                showTags: true,
+                expandIcon: "glyphicon glyphicon-folder-close",
+                collapseIcon: "glyphicon glyphicon-folder-open",
+                emptyIcon: "glyphicon glyphicon-book"
+            });
+
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $(".scenario-docs p").html(function () {
+                var text = $(this).text().trim().split(" ");
+                var first = text.shift();
+                return (text.length > 0 ? "<strong>" + first + "</strong> " : first) + text.join(" ");
+            });
+        });
+    </script>
+</head>
+
+<body class="results-page">
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">Automatizacion de servicios ECM</span>
+        </div>
+    </div>
+</div>
+
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+            <a href='index.html'>Home</a> > <a href="capabilities.html">Requirements</a>
+
+
+
+                > <span class="truncate-40">Ingesta De Documentos - Manera Asincrona</span>
+
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li >
+            <a href="index.html"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li class="active">
+            <a href="#"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 24-02-2020 15:43</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+    <div id="beforetable"></div>
+    <div id="results-dashboard">
+        <div class="table">
+                <div class=row">
+                    <div class="col-sm-12">
+                        <div>
+                            <div clas="table">
+                                <div class="row">
+                                    <div class="col-sm-8">
+                                    <span>
+                                            <h2><i class="fa fa-book"></i> Feature:  Ingesta De Documentos - Manera Asincrona</h2>
+                                        </span>
+                                </div>
+                                    <div class="col-sm-4">
+                                        <span class="feature-tags">
+                                                <p class="tag">
+                                                    <span class="badge tag-badge" style="background:default;">
+                                                        <i class="fa fa-tag"></i>&nbsp;<a class="tagLink"
+                                                                                          style="background:default;"
+                                                                                          href="e3274872c1b263ba5d937d0e1174714631826048e0057d430ddaabcbeb8c07e2.html">Ingestaasync
+                                                        (tag)</a>
+                                                    </span>
+                                                </p>
+                                        </span>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                            <div class="requirementNarrativeTitle">
+                                
+                            </div>
+
+                        </div>
+                    </div>
+
+
+            <div class="row">
+                <div class="col-sm-12">
+
+                    <!-- Requirements result tabs -->
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a data-toggle="tab" href="#specs"><i class="fas fa-comments"></i> Specifications</a>
+                        </li>
+                        <li>
+                            <a data-toggle="tab" href="#results"><i class="fas fa-tachometer-alt"></i> Test Results</a>
+                        </li>
+                    </ul>
+
+                    <!-- Specifications and Results tabs -->
+                    <div class="card border">
+                        <div class="tab-content" id="pills-tabContent">
+                            <div id="specs" class="tab-pane fade in active">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+
+
+                                            <h3>Scenarios</h3>
+
+                                            <div id="toc">
+                                                <table class="table" id="toc-table">
+                                                        <tr>
+                                                            <td style="width:99%;" class="toc-title"><a href="#3388d9a7d8448315a784ede1531e90b68d750c999ebe28d312a98a4a30a10c9c">CP001-CP050</a>
+                                                                     (2 examples)
+
+                                                            </td>
+                                                            <td style="width:1%;"><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i>
+                                                               
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="width:99%;" class="toc-title"><a href="#6a40b86c13080cda74fa1e83914287d52f3e02629d38f9135883d97a47ec0231">CP002-CP029</a>
+                                                                     (2 examples)
+
+                                                            </td>
+                                                            <td style="width:1%;"><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i>
+                                                               
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="width:99%;" class="toc-title"><a href="#69fa38c05b2fa1a06a7bae05dc38f755b425e0717d3de0df8fee884477abeabb">CP003-009-010-011-012-013-014-015-016-017-018-019-020-021-022-023-024-025-026-027-028</a>
+                                                                     (14 examples)
+
+                                                            </td>
+                                                            <td style="width:1%;"><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i>
+                                                               
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="width:99%;" class="toc-title"><a href="#2427c7b66044233993dd5e6013ef22659ca27946ef70774763b54c35db1ceafd">CP022-CP023-CP024-CP025-CP026-CP027-CP028-CP030</a>
+                                                                     (8 examples)
+
+                                                            </td>
+                                                            <td style="width:1%;"><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i>
+                                                               
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="width:99%;" class="toc-title"><a href="#b372051d4e558d66a0571775f64317d9514ff32c7712d8bfd04e6f3aac90e16b">CP031</a>
+
+
+                                                            </td>
+                                                            <td style="width:1%;"><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i>
+                                                               
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="width:99%;" class="toc-title"><a href="#372f9d8316156509865d9368cd2ae32236bf144bc701df8a49495c26db359cd4">CP032</a>
+
+
+                                                            </td>
+                                                            <td style="width:1%;"><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i>
+                                                               
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="width:99%;" class="toc-title"><a href="#c65cf1bb03c8b19fe73fa2a52b9d5c36247e80d2cce19a8f4525d89dc2683166">CP033</a>
+
+
+                                                            </td>
+                                                            <td style="width:1%;"><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i>
+                                                               
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="width:99%;" class="toc-title"><a href="#3646f6fd266468f8b71f7207d6beb7e4cc5738182f5f4ae701493abd920a9356">CP034-CP035-CP036</a>
+                                                                     (3 examples)
+
+                                                            </td>
+                                                            <td style="width:1%;"><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i>
+                                                               
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="width:99%;" class="toc-title"><a href="#ce05646491ed2996d7bf9508ba36a47a51f3953e2ccd400eb8a276a6b389a219">CP046-CP047-CP048-CP049</a>
+                                                                     (4 examples)
+
+                                                            </td>
+                                                            <td style="width:1%;"><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i>
+                                                               
+                                                            </td>
+                                                        </tr>
+                                                </table>
+
+                                            </div>
+
+                                            <h3>Scenario details</h3>
+
+
+                                                <div class="scenario-docs card" id="3388d9a7d8448315a784ede1531e90b68d750c999ebe28d312a98a4a30a10c9c">
+                                                    <div class="scenario-docs card-header success" style="min-height:1.5em;">
+                                                        <div>
+                                                            <span class="scenario-heading">
+                                                                CP001-CP050
+                                                            </span>
+                                                            <span class="scenario-result-icon">
+                                                                
+
+                                                                    <i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i>
+                                                            </span>
+                                                        </div>
+                                                        <div class="scenario-report-badges">
+                                                                <span class="scenario-report-badge" style="float:right;"><a href='f08aa607f6f49d7fbeaab3449540877a26a2ef1dc4c47955b03b0f38620fb6d0.html' class='badge more-details'>Test Results</a></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p>Given Que el Usuario completa el request para ingestar un PDF con las condiciones del {caso_de_prueba}</p>
+                                                            <p>When Usuario realiza la ingesta</p>
+                                                            <p>Then Valida que el response devuelva un mensaje de envio exitoso del archivo R_{caso_de_prueba}.pdf</p>
+                                                        <div class="examples">
+                                                            <p><p>Examples:</p>
+<div class='example-table-in-scenario'><table>
+<thead>
+<tr><th>caso_de_prueba</th><th></th></tr>
+</thead>
+<tbody>
+<tr><td>CP001</td><td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></td></tr>
+<tr><td>CP050</td><td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></td></tr>
+</tbody>
+</table></div>
+</p>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="scenario-docs card" id="6a40b86c13080cda74fa1e83914287d52f3e02629d38f9135883d97a47ec0231">
+                                                    <div class="scenario-docs card-header success" style="min-height:1.5em;">
+                                                        <div>
+                                                            <span class="scenario-heading">
+                                                                CP002-CP029
+                                                            </span>
+                                                            <span class="scenario-result-icon">
+                                                                
+
+                                                                    <i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i>
+                                                            </span>
+                                                        </div>
+                                                        <div class="scenario-report-badges">
+                                                                <span class="scenario-report-badge" style="float:right;"><a href='d35e50c592380ade3731a3ad57176d4a37ed9eb126373bef1b5737f82791c2ea.html' class='badge more-details'>Test Results</a></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p>Given Que el Usuario completa el request para ingestar un EXCEL con las condiciones del {caso_de_prueba}</p>
+                                                            <p>When Usuario realiza la ingesta</p>
+                                                            <p>Then Valida que el response devuelva un mensaje de envio exitoso del archivo R_{caso_de_prueba}.xlsx</p>
+                                                        <div class="examples">
+                                                            <p><p>Examples:</p>
+<div class='example-table-in-scenario'><table>
+<thead>
+<tr><th>caso_de_prueba</th><th></th></tr>
+</thead>
+<tbody>
+<tr><td>CP002</td><td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></td></tr>
+<tr><td>CP029</td><td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></td></tr>
+</tbody>
+</table></div>
+</p>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="scenario-docs card" id="69fa38c05b2fa1a06a7bae05dc38f755b425e0717d3de0df8fee884477abeabb">
+                                                    <div class="scenario-docs card-header success" style="min-height:1.5em;">
+                                                        <div>
+                                                            <span class="scenario-heading">
+                                                                CP003-009-010-011-012-013-014-015-016-017-018-019-020-021-022-023-024-025-026-027-028
+                                                            </span>
+                                                            <span class="scenario-result-icon">
+                                                                
+
+                                                                    <i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i>
+                                                            </span>
+                                                        </div>
+                                                        <div class="scenario-report-badges">
+                                                                <span class="scenario-report-badge" style="float:right;"><a href='72d9f1c1edd8485cb04d3b714ec53c26910adc6a31b8a40564192eebee4ec078.html' class='badge more-details'>Test Results</a></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p>Given Que el Usuario completa el request para ingestar un WORD con las condiciones del {caso_de_prueba}</p>
+                                                            <p>When Usuario realiza la ingesta</p>
+                                                            <p>Then Valida que el response devuelva un mensaje de envio exitoso del archivo R_{caso_de_prueba}.docx</p>
+                                                        <div class="examples">
+                                                            <p><p>Examples:</p>
+<div class='example-table-in-scenario'><table>
+<thead>
+<tr><th>caso_de_prueba</th><th></th></tr>
+</thead>
+<tbody>
+<tr><td>CP003</td><td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></td></tr>
+<tr><td>CP009</td><td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></td></tr>
+<tr><td>CP010</td><td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></td></tr>
+<tr><td>CP011</td><td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></td></tr>
+<tr><td>CP012</td><td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></td></tr>
+<tr><td>CP013</td><td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></td></tr>
+<tr><td>CP014</td><td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></td></tr>
+<tr><td>CP015</td><td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></td></tr>
+<tr><td>CP016</td><td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></td></tr>
+<tr><td>CP017</td><td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></td></tr>
+<tr><td>CP018</td><td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></td></tr>
+<tr><td>CP019</td><td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></td></tr>
+<tr><td>CP020</td><td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></td></tr>
+<tr><td>CP021</td><td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></td></tr>
+</tbody>
+</table></div>
+</p>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="scenario-docs card" id="2427c7b66044233993dd5e6013ef22659ca27946ef70774763b54c35db1ceafd">
+                                                    <div class="scenario-docs card-header success" style="min-height:1.5em;">
+                                                        <div>
+                                                            <span class="scenario-heading">
+                                                                CP022-CP023-CP024-CP025-CP026-CP027-CP028-CP030
+                                                            </span>
+                                                            <span class="scenario-result-icon">
+                                                                
+
+                                                                    <i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i>
+                                                            </span>
+                                                        </div>
+                                                        <div class="scenario-report-badges">
+                                                                <span class="scenario-report-badge" style="float:right;"><a href='5461e3eb9f35b765845867112c429255f90690c0ab1e733ff80342e02e0eafca.html' class='badge more-details'>Test Results</a></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p>Given Que el Usuario completa el request para ingestar un WORD con las condiciones del {caso_de_prueba}</p>
+                                                            <p>When Usuario realiza la ingesta</p>
+                                                            <p>Then Valida que el response muestre un mensaje de error: &quot;{error}&quot;</p>
+                                                        <div class="examples">
+                                                            <p><p>Examples:</p>
+<div class='example-table-in-scenario'><table>
+<thead>
+<tr><th>caso_de_prueba</th><th>error</th><th></th></tr>
+</thead>
+<tbody>
+<tr><td>CP022</td><td>Peticion Incorrecta.</td><td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></td></tr>
+<tr><td>CP023</td><td>Peticion Incorrecta.</td><td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></td></tr>
+<tr><td>CP024</td><td>Peticion Incorrecta.</td><td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></td></tr>
+<tr><td>CP025</td><td>Peticion Incorrecta.</td><td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></td></tr>
+<tr><td>CP026</td><td>Peticion Incorrecta.</td><td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></td></tr>
+<tr><td>CP027</td><td>Propiedad channelUser requerida.</td><td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></td></tr>
+<tr><td>CP028</td><td>Peticion Incorrecta.</td><td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></td></tr>
+<tr><td>CP030</td><td>Peticion Incorrecta.</td><td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></td></tr>
+</tbody>
+</table></div>
+</p>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="scenario-docs card" id="b372051d4e558d66a0571775f64317d9514ff32c7712d8bfd04e6f3aac90e16b">
+                                                    <div class="scenario-docs card-header success" style="min-height:1.5em;">
+                                                        <div>
+                                                            <span class="scenario-heading">
+                                                                CP031
+                                                            </span>
+                                                            <span class="scenario-result-icon">
+                                                                
+
+                                                                    <i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i>
+                                                            </span>
+                                                        </div>
+                                                        <div class="scenario-report-badges">
+                                                                <span class="scenario-report-badge" style="float:right;"><a href='79df42d90ed2cf0e2a75c1acc4741f3c8213fdcc2030e111d518cab75cc8b5fb.html' class='badge more-details'>Test Results</a></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p>Given Que el Usuario completa el request para ingestar una C.R. con las condiciones del CP031</p>
+                                                            <p>When Usuario realiza la ingesta</p>
+                                                            <p>Then Valida que el response muestre un mensaje de error: &quot;Peticion Incorrecta.&quot;</p>
+                                                        <div class="examples">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="scenario-docs card" id="372f9d8316156509865d9368cd2ae32236bf144bc701df8a49495c26db359cd4">
+                                                    <div class="scenario-docs card-header success" style="min-height:1.5em;">
+                                                        <div>
+                                                            <span class="scenario-heading">
+                                                                CP032
+                                                            </span>
+                                                            <span class="scenario-result-icon">
+                                                                
+
+                                                                    <i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i>
+                                                            </span>
+                                                        </div>
+                                                        <div class="scenario-report-badges">
+                                                                <span class="scenario-report-badge" style="float:right;"><a href='8391020130094a031613b2ba18d4a2696cf1630d49ef06e81e2113663429a71f.html' class='badge more-details'>Test Results</a></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p>Given Que el Usuario completa el request para ingestar una Evidencia con las condiciones del CP032</p>
+                                                            <p>When Usuario realiza la ingesta</p>
+                                                            <p>Then Valida que el response muestre un mensaje de error: &quot;El documento fue alterado.&quot;</p>
+                                                        <div class="examples">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="scenario-docs card" id="c65cf1bb03c8b19fe73fa2a52b9d5c36247e80d2cce19a8f4525d89dc2683166">
+                                                    <div class="scenario-docs card-header success" style="min-height:1.5em;">
+                                                        <div>
+                                                            <span class="scenario-heading">
+                                                                CP033
+                                                            </span>
+                                                            <span class="scenario-result-icon">
+                                                                
+
+                                                                    <i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i>
+                                                            </span>
+                                                        </div>
+                                                        <div class="scenario-report-badges">
+                                                                <span class="scenario-report-badge" style="float:right;"><a href='b6f4c1fc90365906a0b36bedde98650ad1fb1397e364bec2a73a20a16d4025a7.html' class='badge more-details'>Test Results</a></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p>Given Que el Usuario completa el request para ingestar una H.R. con las condiciones del CP033</p>
+                                                            <p>When Usuario realiza la ingesta</p>
+                                                            <p>Then Valida que el response muestre un mensaje de error: &quot;Peticion Incorrecta.&quot;</p>
+                                                        <div class="examples">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="scenario-docs card" id="3646f6fd266468f8b71f7207d6beb7e4cc5738182f5f4ae701493abd920a9356">
+                                                    <div class="scenario-docs card-header success" style="min-height:1.5em;">
+                                                        <div>
+                                                            <span class="scenario-heading">
+                                                                CP034-CP035-CP036
+                                                            </span>
+                                                            <span class="scenario-result-icon">
+                                                                
+
+                                                                    <i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i>
+                                                            </span>
+                                                        </div>
+                                                        <div class="scenario-report-badges">
+                                                                <span class="scenario-report-badge" style="float:right;"><a href='e4cc53beb8a8d3b749eadbf5b02c9831bf55e6971191c1454e5b56288f60d333.html' class='badge more-details'>Test Results</a></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p>Given Que el Usuario completa el request para ingestar un archivo no permitido con las condiciones del {caso_de_prueba}</p>
+                                                            <p>When Usuario realiza la ingesta</p>
+                                                            <p>Then Valida que el response muestre un mensaje de error: &quot;Archivo no permitido.&quot;</p>
+                                                        <div class="examples">
+                                                            <p><p>Examples:</p>
+<div class='example-table-in-scenario'><table>
+<thead>
+<tr><th>caso_de_prueba</th><th></th></tr>
+</thead>
+<tbody>
+<tr><td>CP034</td><td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></td></tr>
+<tr><td>CP035</td><td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></td></tr>
+<tr><td>CP036</td><td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></td></tr>
+</tbody>
+</table></div>
+</p>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="scenario-docs card" id="ce05646491ed2996d7bf9508ba36a47a51f3953e2ccd400eb8a276a6b389a219">
+                                                    <div class="scenario-docs card-header success" style="min-height:1.5em;">
+                                                        <div>
+                                                            <span class="scenario-heading">
+                                                                CP046-CP047-CP048-CP049
+                                                            </span>
+                                                            <span class="scenario-result-icon">
+                                                                
+
+                                                                    <i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i>
+                                                            </span>
+                                                        </div>
+                                                        <div class="scenario-report-badges">
+                                                                <span class="scenario-report-badge" style="float:right;"><a href='e7f271eaed07c7bad6d56f404b3c4afa1e9a667369dc6d0c6100ac9f7969503c.html' class='badge more-details'>Test Results</a></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="scenario-docs card-body">
+                                                            <p>Given Que el Usuario completa el request para ingestar un PDF con las condiciones del {caso_de_prueba}</p>
+                                                            <p>When Usuario realiza la ingesta</p>
+                                                            <p>Then Valida que el response muestre un mensaje de error: &quot;{error}&quot;</p>
+                                                        <div class="examples">
+                                                            <p><p>Examples:</p>
+<div class='example-table-in-scenario'><table>
+<thead>
+<tr><th>caso_de_prueba</th><th>error</th><th></th></tr>
+</thead>
+<tbody>
+<tr><td>CP046</td><td>Propiedad id_tramite requerida.</td><td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></td></tr>
+<tr><td>CP047</td><td>Propiedad tipo_documento_identidad requerida.</td><td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></td></tr>
+<tr><td>CP048</td><td>Propiedad apellidos requerida</td><td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></td></tr>
+<tr><td>CP049</td><td>Propiedad nombres requerida.</td><td><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></td></tr>
+</tbody>
+</table></div>
+</p>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="results" class="tab-pane fade">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+
+                                            <div style="width:300px;" class="chart-container automated-and-manual-results">
+                                                <div class="ct-chart ct-square"></div>
+                                            </div>
+                                            <script>
+
+                                                var labels = ['100%', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '];
+                                                // Our series array that contains series objects or in this case series data arrays
+
+                                                var series = [{meta: 'Passing tests (automated)', value: 36}, {meta: 'Passing tests (manual)', value: 0}, {meta: 'Pending tests (automated)', value: 0}, {meta: 'Pending tests (manual)', value: 0}, {meta: 'Ignored tests (automated)', value: 0}, {meta: 'Ignored tests (manual)', value: 0}, {meta: 'Skipped tests (automated)', value: 0}, {meta: 'Skipped tests (manual)', value: 0}, {meta: 'Failing tests (automated)', value: 0}, {meta: 'Failing tests (manual)', value: 0}, {meta: 'Broken tests (automated)', value: 0}, {meta: 'Broken tests (manual)', value: 0}, {meta: 'Compromised tests (automated)', value: 0}, {meta: 'Compromised tests (manual)', value: 0}];
+
+                                                // As options we currently only set a static size of 300x200 px. We can also omit this and use aspect ratio containers
+                                                // as you saw in the previous example
+                                                var options = {
+                                                    width: 350,
+                                                    height: 300
+                                                };
+
+                                                $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+                                                    new Chartist.Pie('.ct-chart', {
+                                                        series: series,
+                                                        labels: labels,
+                                                    }, {
+                                                        donut: true,
+                                                        donutWidth: 60,
+                                                        donutSolid: true,
+                                                        startAngle: 270,
+                                                        showLabel: true
+                                                    }, options);
+                                                });
+
+                                            </script>
+                                        </div>
+                                        <div class="col-sm-8">
+
+                                        <table class="table">
+                                            <thead>
+                                            <tr>
+                                                <th scope="col">Scenario Results (including rows of test data)</th>
+                                                <th scope="col" colspan="2" class="automated-stats">
+                                                    Automated
+                                                </th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                                    <td class="aggregate-result-count">
+                                                                        <a href="b07575c58522990ef7244e68895d4758b9a464776340232c3ff7955e6f8b9417.html"><i
+                                                                                class='fa fa-check-circle-o success-icon'></i>&nbsp;Passing</a>
+                                                                    </td>
+                                                <td class="automated-stats">36</td>
+                                                <td class="automated-stats">100%</td>
+                                            </tr>
+                                            <tr>
+                                                                    <td class="aggregate-result-count"><i
+                                                                            class='fa fa-stop-circle-o pending-icon'></i>&nbsp;Pending
+                                                                    </td>
+                                                <td class="automated-stats">0</td>
+                                                <td class="automated-stats"> </td>
+                                            </tr>
+                                            <tr>
+                                                                <td class="aggregate-result-count"><i
+                                                                        class='fa fa-ban ignored-icon'></i>&nbsp;Ignored
+                                                                </td>
+                                                <td class="automated-stats">0</td>
+                                                <td class="automated-stats"> </td>
+                                            </tr>
+                                            <tr>
+                                                                <td class="aggregate-result-count"><i
+                                                                        class='fa fa-fast-forward skip-icon'></i>&nbsp;Skipped
+                                                                </td>
+                                                <td class="automated-stats">0</td>
+                                                <td class="automated-stats"> </td>
+                                            </tr>
+                                            <tr>
+                                                                    <td colspan="3"><a href="d69a37d99c353c8069b18af65d4363334cfd7925e323a93a9fb42ac31a6f2510.html"><i
+                                                                            class='fa fa-times failure-icon'></i>&nbsp;<em>Unsuccessful</em></a>
+                                                                    </td>
+                                            </tr>
+
+                                            <tr>
+                                                                <td class="aggregate-result-count indented-error-category">
+                                                                    <i
+                                                                            class='fa fa-times-circle failure-icon'></i>&nbsp;Failed
+                                                                </td>
+                                                <td class="automated-stats">0</td>
+                                                <td class="automated-stats"> </td>
+                                            <tr>
+                                                                <td class="aggregate-result-count indented-error-category">
+                                                                    <i
+                                                                            class='fa fa-exclamation-triangle error-icon'></i>&nbsp;Broken
+                                                                </td>
+                                                <td class="automated-stats">0</td>
+                                                <td class="automated-stats"> </td>
+                                            <tr>
+                                                                <td class="aggregate-result-count indented-error-category">
+                                                                    <i
+                                                                            class='fa fa-chain-broken compromised-icon'></i>&nbsp;Compromised
+                                                                </td>
+                                                <td class="automated-stats">0</td>
+                                                <td class="automated-stats"> </td>
+                                            </tr>
+                                            <tr class="summary-stats">
+                                                <td class="aggregate-result-count">Total</td>
+                                                <td class="automated-stats">36</td>
+                                                <td class="automated-stats"></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    </div>
+
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <table class="table">
+                                                    <thead>
+                                                    <tr>
+                                                        <th>Execution Time</th>
+                                                        <th>Clock Time</th>
+                                                        <th>Fastest Test</th>
+                                                        <th>Slowest Test</th>
+                                                        <th>Average Execution Time</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    <tr>
+                                                        <td> 1m 9s</td>
+                                                        <td> 1m 0s</td>
+                                                        <td>822ms</td>
+                                                        <td>23s</td>
+                                                        <td>7s</td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <h3><i class="fas fa-cogs"></i> Automated Tests</h3>
+
+                                            <table class="scenario-result-table table" id="scenario-results">
+                                                <thead>
+                                                <tr>
+                                                    <th class="test-name-column">Scenario</th>
+                                                    <th>Steps</th>
+                                                    <th>Start Time</th>
+                                                    <th>Duration</th>
+                                                    <th>Result</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr class="scenario-result SUCCESS">
+                                                    <td>
+                                                            <a href="f08aa607f6f49d7fbeaab3449540877a26a2ef1dc4c47955b03b0f38620fb6d0.html">Cp001-cp050</a>
+                                                               (2 examples)
+                                                    </td>
+                                                    <td>3</td>
+                                                    <td>15:43:52</td>
+                                                    <td>00:11</td>
+                                                    <td>
+                                                            <i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i> <span
+                                                                style="display:none">SUCCESS</span>
+                                                    </td>
+                                                </tr>
+                                                <tr class="scenario-result SUCCESS">
+                                                    <td>
+                                                            <a href="d35e50c592380ade3731a3ad57176d4a37ed9eb126373bef1b5737f82791c2ea.html">Cp002-cp029</a>
+                                                               (2 examples)
+                                                    </td>
+                                                    <td>3</td>
+                                                    <td>15:44:03</td>
+                                                    <td>00:02</td>
+                                                    <td>
+                                                            <i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i> <span
+                                                                style="display:none">SUCCESS</span>
+                                                    </td>
+                                                </tr>
+                                                <tr class="scenario-result SUCCESS">
+                                                    <td>
+                                                            <a href="72d9f1c1edd8485cb04d3b714ec53c26910adc6a31b8a40564192eebee4ec078.html">Cp003-009-010-011-012-013-014-015-016-017-018-019-020-021-022-023-024-025-026-027-028</a>
+                                                               (14 examples)
+                                                    </td>
+                                                    <td>3</td>
+                                                    <td>15:44:06</td>
+                                                    <td>00:23</td>
+                                                    <td>
+                                                            <i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i> <span
+                                                                style="display:none">SUCCESS</span>
+                                                    </td>
+                                                </tr>
+                                                <tr class="scenario-result SUCCESS">
+                                                    <td>
+                                                            <a href="5461e3eb9f35b765845867112c429255f90690c0ab1e733ff80342e02e0eafca.html">Cp022-cp023-cp024-cp025-cp026-cp027-cp028-cp030</a>
+                                                               (8 examples)
+                                                    </td>
+                                                    <td>3</td>
+                                                    <td>15:44:29</td>
+                                                    <td>00:11</td>
+                                                    <td>
+                                                            <i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i> <span
+                                                                style="display:none">SUCCESS</span>
+                                                    </td>
+                                                </tr>
+                                                <tr class="scenario-result SUCCESS">
+                                                    <td>
+                                                            <a href="79df42d90ed2cf0e2a75c1acc4741f3c8213fdcc2030e111d518cab75cc8b5fb.html">Cp031</a>
+                                                    </td>
+                                                    <td>3</td>
+                                                    <td>15:44:41</td>
+                                                    <td>00:00</td>
+                                                    <td>
+                                                            <i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i> <span
+                                                                style="display:none">SUCCESS</span>
+                                                    </td>
+                                                </tr>
+                                                <tr class="scenario-result SUCCESS">
+                                                    <td>
+                                                            <a href="8391020130094a031613b2ba18d4a2696cf1630d49ef06e81e2113663429a71f.html">Cp032</a>
+                                                    </td>
+                                                    <td>3</td>
+                                                    <td>15:44:42</td>
+                                                    <td>00:01</td>
+                                                    <td>
+                                                            <i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i> <span
+                                                                style="display:none">SUCCESS</span>
+                                                    </td>
+                                                </tr>
+                                                <tr class="scenario-result SUCCESS">
+                                                    <td>
+                                                            <a href="b6f4c1fc90365906a0b36bedde98650ad1fb1397e364bec2a73a20a16d4025a7.html">Cp033</a>
+                                                    </td>
+                                                    <td>3</td>
+                                                    <td>15:44:43</td>
+                                                    <td>00:03</td>
+                                                    <td>
+                                                            <i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i> <span
+                                                                style="display:none">SUCCESS</span>
+                                                    </td>
+                                                </tr>
+                                                <tr class="scenario-result SUCCESS">
+                                                    <td>
+                                                            <a href="e4cc53beb8a8d3b749eadbf5b02c9831bf55e6971191c1454e5b56288f60d333.html">Cp034-cp035-cp036</a>
+                                                               (3 examples)
+                                                    </td>
+                                                    <td>3</td>
+                                                    <td>15:44:47</td>
+                                                    <td>00:04</td>
+                                                    <td>
+                                                            <i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i> <span
+                                                                style="display:none">SUCCESS</span>
+                                                    </td>
+                                                </tr>
+                                                <tr class="scenario-result SUCCESS">
+                                                    <td>
+                                                            <a href="e7f271eaed07c7bad6d56f404b3c4afa1e9a667369dc6d0c6100ac9f7969503c.html">Cp046-cp047-cp048-cp049</a>
+                                                               (4 examples)
+                                                    </td>
+                                                    <td>3</td>
+                                                    <td>15:44:52</td>
+                                                    <td>00:09</td>
+                                                    <td>
+                                                            <i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i> <span
+                                                                style="display:none">SUCCESS</span>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <h3><i class="fas fa-edit"></i> Manual Tests</h3>
+
+                                                No manual tests were recorded
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <span class="version">Serenity BDD version 2.0.30</span>
+                    </div>
+                </div>
+            </div>
+</body>
+</html>

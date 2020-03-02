@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: Ingesta de Documentos - Manera Asincrona
+-------------------------------------------------------------------------------
+Tests run: 36, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 69.256 s - in Ingesta de Documentos - Manera Asincrona

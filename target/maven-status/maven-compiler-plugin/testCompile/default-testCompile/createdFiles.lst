@@ -1,0 +1,11 @@
+ibk\steps\UsuarioNavigator.class
+ibk\steps\ServicioIngestaAsync.class
+ibk\stepsdefinitions\UsuarioDeficionesPasosNavigator.class
+ibk\stepsdefinitions\UsuarioServicioConsultaPorFiltro.class
+ibk\steps\ServicioConsultaPuntual.class
+ibk\steps\ServicioConsultaPorFiltro.class
+ibk\pageobject\PaginaPrincipal.class
+ibk\Utils\Util.class
+Runner.class
+ibk\stepsdefinitions\UsuarioServicioIngestaAsync.class
+ibk\stepsdefinitions\UsuarioServicioConsultaPuntual.class

@@ -1,0 +1,24 @@
+{
+  "data": "",
+  "fileName": "R_CP031.xlsx",
+  "filePathAsync": "/path/CP031.xlsx",
+  "fileExtension": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+  "emittedDate": "15-01-2020 10:08:12",
+  "expirationDate": "15-01-2021 16:08:12",
+  "physicalLocation": "Location",
+  "channelUser": "User",
+  "taxonomy": {
+    "documentClass": "CLASE_RECLAMOS",
+    "properties": {
+      "id_tramite": "REGRESION",
+      "tipo_documento": "TDR0002",
+      "tipo_tramite": "TTR0003",
+      "apellidos": "Jimenez Seminario",
+      "nombres": "Henry Samir",
+      "tipo_documento_identidad": "TDI0003",
+      "numero_documento_identidad": "ABCD76747518",
+      "codigo_unico_cliente": "02157867",
+      "producto": "PDO0010"
+    }
+  }
+}

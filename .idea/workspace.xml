@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="59ad60da-8396-46a8-858e-80a2bbc48027" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1XRDM62RgOSo5PMQ3k8yeZR6zVh" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\XT9867\Downloads\cucumber-serenity-restassured-master\cucumber-serenity-restassured-master\IBKServices\src\test\resources\webdriver" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean" />
+      <command value="mvn clean verify" />
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Runner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="IBKServices_Ejemplos" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Runner" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.Runner" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="59ad60da-8396-46a8-858e-80a2bbc48027" name="Default Changelist" comment="" />
+      <created>1580999962217</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1580999962217</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="233" y="0" key="#Project_Structure" timestamp="1582226801578">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="233" y="0" key="#Project_Structure/0.0.1280.680@0.0.1280.680" timestamp="1582226801578" />
+    <state x="399" y="144" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582306405902">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="399" y="144" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680@0.0.1280.680" timestamp="1582306405902" />
+    <state x="367" y="211" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1581002105666">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="367" y="211" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.680@0.0.1280.680" timestamp="1581002105666" />
+    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1581368052056">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1581368052056" />
+    <state width="1238" height="294" key="GridCell.Tab.0.bottom" timestamp="1582577667018">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1238" height="294" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1582577667018" />
+    <state width="1238" height="294" key="GridCell.Tab.0.center" timestamp="1582577667017">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1238" height="294" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1582577667017" />
+    <state width="1238" height="294" key="GridCell.Tab.0.left" timestamp="1582577667017">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1238" height="294" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1582577667017" />
+    <state width="1238" height="294" key="GridCell.Tab.0.right" timestamp="1582577667018">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1238" height="294" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1582577667018" />
+    <state x="171" y="0" key="Maven.ArtifactSearchDialog" timestamp="1581010261972">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="171" y="0" key="Maven.ArtifactSearchDialog/0.0.1280.680@0.0.1280.680" timestamp="1581010261972" />
+    <state x="65" y="37" key="new project wizard" timestamp="1581519516609">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="65" y="37" key="new project wizard/0.0.1280.680@0.0.1280.680" timestamp="1581519516609" />
+    <state x="525" y="378" width="672" height="677" key="run.anything.popup" timestamp="1582577013644">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="525" y="378" width="672" height="677" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1582577013644" />
+    <state x="303" y="2" width="672" height="678" key="search.everywhere.popup" timestamp="1582576330166">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="303" y="2" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1582576330166" />
+  </component>
+</project>
